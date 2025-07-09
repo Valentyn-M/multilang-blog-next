@@ -1,0 +1,45 @@
+$fontFamily: 'Inter', sans-serif;
+$fontSize: 16;
+
+// Colors
+$main-color: #222831;
+$dark-color: #393e46;
+$bg-color: #eeeeee;
+$brand-color: #00adb5;
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$minWidth: 320;
+$maxWidth: 1230;
+$maxWidthContainer: 1230;
+$containerPadding: 30;
+
+// First breakpoint trigger width
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$pc: $containerWidth;
+
+$tabletAfter: 992.02;
+$tablet: 992;
+$tabletBefore: 991.98;
+
+$mobileAfter: 768.02;
+$mobile: 768;
+$mobileBefore: 767.98;
+
+$mobileMediumAfter: 600.02;
+$mobileMedium: 600;
+$mobileMediumBefore: 599.98;
+
+$mobileSmallAfter: 375.02;
+$mobileSmall: 375;
+
+$adaptiveType: 1;
+
+$minMaxWidthType: $minWidth;
+@if $adaptiveType == 2 {
+  $minMaxWidthType: $maxWidth;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
