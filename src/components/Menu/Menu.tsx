@@ -8,10 +8,14 @@ export default function Menu({}: MenuProps) {
     <nav className={s.menu}>
       <ul className={s.list}>
         <li className={s.item}>
-          <Link href="/">Home</Link>
+          <Link href="/" className={s.link}>
+            Home
+          </Link>
         </li>
-        <li>
-          <Link href="/about">About</Link>
+        <li className={s.item}>
+          <Link href="/about" className={s.link}>
+            About
+          </Link>
         </li>
       </ul>
     </nav>
