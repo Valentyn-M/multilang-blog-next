@@ -1,0 +1,12 @@
+.posts {
+  @include adaptiveValue('padding-top', 30, 20);
+  @include adaptiveValue('padding-bottom', 30, 20);
+}
+
+.title {
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  @include adaptiveValue('font-size', 36, 24);
+}

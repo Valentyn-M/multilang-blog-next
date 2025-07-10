@@ -1,16 +1,5 @@
+import Posts from '@/components/Posts/Posts';
+
 export default function Home() {
-  return (
-    <div className="container">
-      <h1>Home page</h1>
-      <p>Відображає список усіх постів, отриманих з API.</p>
-      <p>
-        Для кожного поста виводиться лише заголовок (title) та кнопка, що є
-        посиланням, яке веде на сторінку цього поста.
-      </p>
-      <p>
-        Ця сторінка має бути серверним компонентом (Server Component), який
-        отримує дані на сервері.
-      </p>
-    </div>
-  );
+  return <Posts />;
 }

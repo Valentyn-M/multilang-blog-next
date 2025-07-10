@@ -37,7 +37,6 @@ export default function RootLayout({
       <body>
         <div className="wrapper">
           <Header />
-          {/* TODO Is it necerssery "React.lazy() + Suspense" for pages */}
           <main className="main">{children}</main>
           <Footer />
         </div>

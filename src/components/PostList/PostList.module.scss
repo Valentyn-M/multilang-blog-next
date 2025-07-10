@@ -1,0 +1,17 @@
+.postList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include adaptiveValue('column-gap', 30, 15, $pc, $mobile);
+  @include adaptiveValue('row-gap', 45, 30, $pc, $mobile);
+
+  @media (max-width: rem($mobile)) {
+    grid-template-columns: 1fr 1fr;
+    @include adaptiveValue('column-gap', 30, 15, $mobile, $mobileSmall);
+    @include adaptiveValue('row-gap', 45, 30, $mobile, $mobileSmall);
+  }
+
+  @media (max-width: rem($mobileSmall)) {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}
