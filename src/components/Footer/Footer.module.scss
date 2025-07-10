@@ -1,0 +1,30 @@
+.footer {
+  min-height: 68px;
+  background-color: $brandColor;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: rem($mobileSmall)) {
+    min-height: 62px;
+  }
+}
+
+.footerWrap {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  color: $whiteColor;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+
+  @media (max-width: rem($mobileSmall)) {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+}
