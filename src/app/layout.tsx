@@ -6,9 +6,11 @@ export const metadata = {
   icons: {
     icon: '/favicon.svg', // TODO fix icon display
   },
-  title: 'Mini-blog',
+  title: 'Mini-Blog',
   description: 'A small multilingual blog built with Next.js (App Router)',
-  authors: [{ name: 'Valentyn', url: 'https://github.com/Valentyn-M' }],
+  authors: [
+    { name: 'Valentyn Mostovyi', url: 'https://github.com/Valentyn-M' },
+  ],
 };
 
 export default function RootLayout({
@@ -31,9 +33,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header />
-        <main className="main">{children}</main>
-        <Footer />
+        <div className="wrapper">
+          <Header />
+          {/* TODO Is it necerssery "React.lazy() + Suspense" for pages */}
+          <main className="main">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

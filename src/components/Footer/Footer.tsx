@@ -6,7 +6,7 @@ export default function Footer({}: FooterProps) {
   return (
     <footer className={s.footer}>
       <p>
-        © Mini-blog, {new Date().getFullYear()} | Created by Valentyn Mostovyi
+        © Mini-Blog, {new Date().getFullYear()} | Created by Valentyn Mostovyi
       </p>
     </footer>
   );

@@ -1,22 +1,18 @@
-import Link from 'next/link';
+import Menu from '@/components/Menu/Menu';
 import s from './Header.module.scss';
+import Logo from '@/components/Logo/Logo';
+import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
 
 export interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
   return (
     <header className={s.header}>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <div>EN</div>
+      <div className={}>
+        <Logo />
+        <Menu />
+        <LanguageSwitcher />
+      </div>
     </header>
   );
 }

@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <>
+    <div className="container">
       <h1>Home page</h1>
       <p>Відображає список усіх постів, отриманих з API.</p>
       <p>
@@ -11,6 +11,6 @@ export default function Home() {
         Ця сторінка має бути серверним компонентом (Server Component), який
         отримує дані на сервері.
       </p>
-    </>
+    </div>
   );
 }

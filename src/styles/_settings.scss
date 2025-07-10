@@ -12,10 +12,11 @@ $brand-color: #00adb5;
 $minWidth: 320;
 $maxWidth: 1230;
 $maxWidthContainer: 1230;
-$containerPadding: 30;
+$containerPadding: 15;
+$containerPaddings: 30 * 2;
 
 // First breakpoint trigger width
-$containerWidth: $maxWidthContainer + $containerPadding;
+$containerWidth: $maxWidthContainer + $containerPaddings;
 
 // Breakpoints
 $pc: $containerWidth;
@@ -32,8 +33,8 @@ $mobileMediumAfter: 600.02;
 $mobileMedium: 600;
 $mobileMediumBefore: 599.98;
 
-$mobileSmallAfter: 375.02;
-$mobileSmall: 375;
+$mobileSmallAfter: 425.02;
+$mobileSmall: 425;
 
 $adaptiveType: 1;
 
