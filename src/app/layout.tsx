@@ -4,7 +4,7 @@ import '@/styles/index.scss';
 
 export const metadata = {
   icons: {
-    icon: '/favicon.svg', // TODO fix icon display
+    icon: '/favicon.svg',
   },
   title: 'Mini-Blog',
   description: 'A small multilingual blog built with Next.js (App Router)',

@@ -3,11 +3,15 @@
   flex-wrap: wrap;
   row-gap: 15px;
   column-gap: 40px;
+
+  @media (max-width: rem($mobileMedium)) {
+    column-gap: 15px;
+  }
 }
 
 .link {
   color: $whiteColor;
-  padding: 7px 0;
+  padding: 6px 0;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 500;

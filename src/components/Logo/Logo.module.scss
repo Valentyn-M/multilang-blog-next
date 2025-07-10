@@ -6,10 +6,19 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+
+  @media (max-width: rem($mobileSmall)) {
+    @include adaptiveValue('font-size', 24, 20, $mobileSmall);
+  }
 }
 
 .logoIcon {
   fill: $whiteColor;
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
+
+  @media (max-width: rem($mobileSmall)) {
+    display: none;
+  }
 }

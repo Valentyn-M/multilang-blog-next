@@ -1,0 +1,47 @@
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  color: $whiteColor;
+  padding: 6px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+
+  @media (max-width: rem($mobileSmall)) {
+    @include adaptiveValue('font-size', 18, 16, $mobileSmall);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background-color: $whiteColor;
+    transition:
+      left 0.3s,
+      width 0.3s;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  &:focus {
+    &::before {
+      left: 0;
+      width: 100%;
+    }
+  }
+}

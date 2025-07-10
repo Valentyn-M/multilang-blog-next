@@ -1,17 +1,10 @@
 .header {
-  min-height: 80px;
+  min-height: 68px;
   background-color: $brandColor;
   display: flex;
   align-items: center;
-}
 
-.headerWrap {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  @media (max-width: rem($mobileSmall)) {
+    @include adaptiveValue('min-height', 68, 62, $mobileSmall);
+  }
 }
