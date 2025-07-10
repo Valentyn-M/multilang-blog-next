@@ -5,6 +5,6 @@
   align-items: center;
 
   @media (max-width: rem($mobileSmall)) {
-    @include adaptiveValue('min-height', 68, 62, $mobileSmall);
+    min-height: 62px;
   }
 }

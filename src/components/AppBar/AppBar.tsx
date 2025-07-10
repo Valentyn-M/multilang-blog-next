@@ -1,8 +1,9 @@
 import s from './AppBar.module.scss';
 import Logo from '@/components/Logo/Logo';
-import Menu from '@/components/Menu/Menu';
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
 import clsx from 'clsx';
+import MenuMobileWrapper from '@/components/MenuMobileWrapper/MenuMobileWrapper';
+import MenuHeader from '@/components/MenuHeader/MenuHeader';
 
 export interface AppBarProps {}
 
@@ -11,10 +12,13 @@ export default function AppBar({}: AppBarProps) {
     <div className={clsx(s.appBar, 'container')}>
       <Logo />
 
-      {/* Render if scfreen width is 480px or more */}
-      <Menu />
+      {/* Render if screen width is 480px or more */}
+      <MenuHeader />
 
       <LanguageSwitcher />
+
+      {/* Render if screen width is 480px or more */}
+      <MenuMobileWrapper />
     </div>
   );
 }

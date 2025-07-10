@@ -7,6 +7,12 @@
   @media (max-width: rem($mobileMedium)) {
     column-gap: 15px;
   }
+
+  @media (max-width: rem($mobileSmall)) {
+    flex-direction: column;
+    row-gap: 22px;
+    align-items: center;
+  }
 }
 
 .link {
@@ -16,6 +22,12 @@
   text-transform: uppercase;
   font-weight: 500;
   position: relative;
+
+  @media (max-width: rem($mobileSmall)) {
+    color: $brandColor;
+    padding: 8px 0;
+    font-size: 20px;
+  }
 
   &::before {
     content: '';
@@ -28,6 +40,10 @@
     transition:
       left 0.3s,
       width 0.3s;
+
+    @media (max-width: rem($mobileSmall)) {
+      background-color: $brandColor;
+    }
   }
 
   @media (any-hover: hover) {

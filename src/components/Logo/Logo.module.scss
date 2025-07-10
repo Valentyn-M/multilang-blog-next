@@ -8,7 +8,8 @@
   gap: 5px;
 
   @media (max-width: rem($mobileSmall)) {
-    @include adaptiveValue('font-size', 24, 20, $mobileSmall);
+    font-size: 22px;
+    margin-right: auto;
   }
 }
 
