@@ -13,6 +13,8 @@ export const metadata = {
   ],
 };
 
+export const svgIcon = '/svgSprite.svg';
+
 export default function RootLayout({
   children,
 }: Readonly<{

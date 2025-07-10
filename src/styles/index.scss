@@ -17,7 +17,8 @@ body {
   font-family: $fontFamily;
   font-weight: 400;
   font-size: #{$fontSize}px;
-  color: var(--main-color);
+  color: $mainColor;
+  background-color: $bgColor;
   overflow-wrap: break-word;
   min-width: #{$minWidth}px;
 

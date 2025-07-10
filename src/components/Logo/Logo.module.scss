@@ -1,0 +1,15 @@
+.logo {
+  color: $whiteColor;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.logoIcon {
+  fill: $whiteColor;
+  width: 24px;
+  height: 24px;
+}
