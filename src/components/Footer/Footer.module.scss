@@ -28,3 +28,16 @@
     line-height: 1.35;
   }
 }
+
+.link {
+  text-decoration: underline;
+
+  @media (any-hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}

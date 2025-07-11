@@ -1,17 +1,28 @@
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
+import {
+  SITE_AUTHOR_NAME,
+  SITE_AUTHOR_URL,
+  SITE_DESCRIPTION,
+  SITE_TITLE,
+} from '@/constants/site.config';
 import '@/styles/index.scss';
+import { Inter } from 'next/font/google';
 
 export const metadata = {
   icons: {
     icon: '/favicon.svg',
   },
-  title: 'Mini-Blog',
-  description: 'A small multilingual blog built with Next.js (App Router)',
-  authors: [
-    { name: 'Valentyn Mostovyi', url: 'https://github.com/Valentyn-M' },
-  ],
+  title: `${SITE_TITLE}`,
+  description: `${SITE_DESCRIPTION}`,
+  authors: [{ name: `${SITE_AUTHOR_NAME}`, url: `${SITE_AUTHOR_URL}` }],
 };
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+});
 
 export const svgIcon = '/svgSprite.svg';
 
@@ -21,19 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={inter.className}>
+      <head></head>
       <body>
         <div className="wrapper">
           <Header />

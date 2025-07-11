@@ -1,5 +1,7 @@
+import { SITE_TITLE } from '@/constants/site.config';
+
 export const metadata = {
-  title: 'About | Mini-blog',
+  title: `${SITE_TITLE} | About`,
   description: 'Learn more about our multilingual blog project.',
 };
 

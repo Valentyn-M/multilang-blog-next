@@ -1,6 +1,6 @@
 .posts {
+  padding-bottom: 30px;
   @include adaptiveValue('padding-top', 30, 20);
-  @include adaptiveValue('padding-bottom', 30, 20);
 }
 
 .title {

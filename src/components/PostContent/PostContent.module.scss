@@ -11,8 +11,8 @@
   background-color: $whiteColor;
   border-radius: 6px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
-  padding-top: 20px;
   padding-bottom: 30px;
+  @include adaptiveValue('padding-top', 30, 20);
   @include adaptiveValue('padding-left', 30, 15, $pc, $mobile);
   @include adaptiveValue('padding-right', 30, 15, $pc, $mobile);
 

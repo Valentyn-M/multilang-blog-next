@@ -1,4 +1,5 @@
 import PostContent from '@/components/PostContent/PostContent';
+import { SITE_TITLE } from '@/constants/site.config';
 import { fetchPost } from '@/lib/fetchPost';
 import { Post } from '@/types/post';
 
@@ -18,7 +19,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PostPageProps) {
   const { id } = await params;
   const post = await fetchPost(id);
-  return { title: post.title, description: post.body.slice(0, 160) };
+  return {
+    title: `${SITE_TITLE} | ${post.title}`,
+    description: post.body.slice(0, 160),
+  };
 }
 
 export default async function PostPage({ params }: PostPageProps) {
