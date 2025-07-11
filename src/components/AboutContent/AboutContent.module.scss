@@ -12,9 +12,6 @@
 .body {
   p {
     line-height: 1.5;
-    &::first-letter {
-      text-transform: uppercase;
-    }
     &:not(:last-child) {
       margin-bottom: 15px;
     }
