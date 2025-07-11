@@ -1,3 +1,4 @@
+import PostContent from '@/components/PostContent/PostContent';
 import { fetchPost } from '@/lib/fetchPost';
 import { Post } from '@/types/post';
 
@@ -24,7 +25,5 @@ export default async function PostPage({ params }: PostPageProps) {
   const { id } = await params;
   const post = await fetchPost(id);
 
-  return (
-<Post
-  );
+  return <PostContent postData={post} />;
 }
