@@ -4,10 +4,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export interface PostItemProps {
-  postData: Post;
+  readonly postData: Post;
+  readonly priority?: boolean;
 }
 
-export default function PostItem({ postData }: PostItemProps) {
+export default function PostItem({
+  postData,
+  priority = false,
+}: PostItemProps) {
   const { title, id } = postData;
 
   return (
@@ -17,6 +21,7 @@ export default function PostItem({ postData }: PostItemProps) {
         alt={title}
         width={380}
         height={285}
+        priority={priority}
         className={s.img}
       />
       <div className={s.textBlock}>

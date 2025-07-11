@@ -7,10 +7,7 @@ async function getPosts(): Promise<Post[]> {
     next: { revalidate: 300 },
   });
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch posts');
-  }
-
+  if (!res.ok) throw new Error('Failed to fetch posts');
   return res.json();
 }
 

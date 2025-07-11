@@ -9,9 +9,9 @@ export interface PostListProps {
 export default function PostList({ posts }: PostListProps) {
   return (
     <ul className={s.postList}>
-      {posts.map((post) => (
+      {posts.map((post, index) => (
         <li key={post.id} className={s.postItem}>
-          <PostItem postData={post} />
+          <PostItem postData={post} priority={index < 6} />
         </li>
       ))}
     </ul>
