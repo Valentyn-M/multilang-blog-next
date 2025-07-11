@@ -9,13 +9,6 @@
   @include adaptiveValue('font-size', 36, 28);
 }
 
-.img {
-  width: 100%;
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-}
-
 .body {
   p {
     line-height: 1.5;
