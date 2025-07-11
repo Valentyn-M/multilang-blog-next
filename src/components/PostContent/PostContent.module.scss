@@ -1,17 +1,42 @@
 .postContent {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @media (max-width: rem($mobile)) {
+    padding: 0;
+  }
+}
+
+.postWrap {
+  background-color: $whiteColor;
+  border-radius: 6px;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
+  padding-top: 20px;
+  padding-bottom: 30px;
+  @include adaptiveValue('padding-left', 30, 15, $pc, $mobile);
+  @include adaptiveValue('padding-right', 30, 15, $pc, $mobile);
+
+  @media (max-width: rem($mobile)) {
+    border-radius: 0;
+  }
 }
 
 .title {
   line-height: 1.5;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: center;
   &::first-letter {
     text-transform: uppercase;
   }
   @include adaptiveValue('font-size', 36, 28);
+}
+
+.img {
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .body {
