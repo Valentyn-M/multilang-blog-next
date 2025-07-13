@@ -1,4 +1,4 @@
-import { svgIcon } from '@/app/layout';
+import { svgIcon } from '@/app/[lang]/layout';
 import s from './Logo.module.scss';
 import Link from 'next/link';
 

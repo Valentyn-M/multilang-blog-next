@@ -3,7 +3,7 @@ import s from './Posts.module.scss';
 import { Post } from '@/types/post';
 
 export interface PostsProps {
-  posts: Post[];
+  readonly posts: Post[];
 }
 
 export default async function Posts({ posts }: PostsProps) {

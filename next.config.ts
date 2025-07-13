@@ -3,7 +3,7 @@ import type { Configuration as WebpackConfig } from 'webpack';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* ─────────  Sass  ───────── */
+  // Sass
   sassOptions: {
     includePaths: [path.join(__dirname, 'src')],
     additionalData: `
@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   `,
   },
 
-  /* ────────  Webpack alias  ──────── */
+  // Webpack alias
   webpack: (config: WebpackConfig) => {
     config.resolve ??= {};
     config.resolve.alias = {
