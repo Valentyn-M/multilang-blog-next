@@ -30,14 +30,27 @@
 }
 
 .link {
-  text-decoration: underline;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $whiteColor;
+    transition: opacity 0.15s;
+  }
 
   @media (any-hover: hover) {
     &:hover {
-      text-decoration: none;
+      &::after {
+        opacity: 0;
+      }
     }
   }
   &:focus {
-    text-decoration: none;
+    opacity: 0;
   }
 }

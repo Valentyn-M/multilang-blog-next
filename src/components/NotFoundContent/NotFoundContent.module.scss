@@ -1,0 +1,56 @@
+.notFoundContent {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 10px;
+  @include adaptiveValue('font-size', 36, 28);
+}
+
+.message {
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: $errorColor;
+  @include adaptiveValue('font-size', 22, 18);
+}
+
+.body {
+  p {
+    line-height: 1.5;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    @include adaptiveValue('font-size', 17, 15);
+  }
+}
+
+.link {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background-color: $brandColor;
+    transition: opacity 0.15s;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+  &:focus {
+    opacity: 0;
+  }
+}

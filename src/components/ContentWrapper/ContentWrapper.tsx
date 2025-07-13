@@ -7,8 +7,8 @@ export interface ContentWrapperProps {
 
 export default function ContentWrapper({ children }: ContentWrapperProps) {
   return (
-    <section className={clsx(s.contentWrapper, 'container')}>
+    <article className={clsx(s.contentWrapper, 'container')}>
       <div className={s.contentBody}>{children}</div>
-    </section>
+    </article>
   );
 }
