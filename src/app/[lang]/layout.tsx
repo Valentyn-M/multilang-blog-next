@@ -13,8 +13,7 @@ import { Inter } from 'next/font/google';
 
 // 1. SSG for root routes /en, /uk
 export async function generateStaticParams() {
-  // Next generates /en, /uk on build-time
-  return i18n.locales.map((l) => ({ lang: l }));
+  return i18n.locales.map((lang) => ({ lang }));
 }
 
 // 2. SEO-Metadata, localized
@@ -27,12 +26,15 @@ export async function generateMetadata({
   const dict = await getDictionary(lang);
 
   return {
-    icons: {
-      icon: '/favicon.svg',
-    },
     title: SITE_TITLE,
     description: dict['site-description'],
     authors: [{ name: SITE_AUTHOR_NAME, url: SITE_AUTHOR_URL }],
+    icons: {
+      icon: [
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: '/favicon.ico', type: 'image/x-icon' },
+      ],
+    },
   };
 }
 

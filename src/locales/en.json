@@ -1,5 +1,7 @@
 {
   "home": "Home",
   "about": "About us",
-  "site-description": "A small multilingual blog built with Next.js (App Router)"
+  "site-description": "A small multilingual blog built with Next.js (App Router)",
+  "autor": "Valentyn Mostovyi",
+  "autor-by": "Valentyn Mostovyi"
 }
