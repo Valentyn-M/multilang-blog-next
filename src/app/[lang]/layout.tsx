@@ -1,10 +1,6 @@
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
-import {
-  SITE_AUTHOR_NAME,
-  SITE_AUTHOR_URL,
-  SITE_TITLE,
-} from '@/constants/site.config';
+import { SITE_AUTHOR_URL, SITE_TITLE } from '@/constants/site.config';
 import { getDictionary } from '@/lib/getDictionary';
 import { i18n, Locale } from '@/lib/i18n-config';
 import '@/styles/index.scss';
@@ -27,8 +23,8 @@ export async function generateMetadata({
 
   return {
     title: SITE_TITLE,
-    description: dict['site-description'],
-    authors: [{ name: SITE_AUTHOR_NAME, url: SITE_AUTHOR_URL }],
+    description: dict['siteDescription'],
+    authors: [{ name: dict['autor'], url: SITE_AUTHOR_URL }],
     icons: {
       icon: [
         { url: '/favicon.svg', type: 'image/svg+xml' },

@@ -4,10 +4,15 @@ import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
 import clsx from 'clsx';
 import MenuMobileWrapper from '@/components/MenuMobileWrapper/MenuMobileWrapper';
 import MenuHeader from '@/components/MenuHeader/MenuHeader';
+import { Dictionary } from '@/lib/getDictionary';
+import { Locale } from '@/lib/i18n-config';
 
-export interface AppBarProps {}
+export interface AppBarProps {
+  dict: Dictionary; // або Dictionary['header'] – тільки потрібні ключі
+  lang: Locale;
+}
 
-export default function AppBar({}: AppBarProps) {
+export default function AppBar({ dict, lang }: AppBarProps) {
   return (
     <div className={clsx(s.appBar, 'container')}>
       <Logo />
@@ -15,7 +20,7 @@ export default function AppBar({}: AppBarProps) {
       {/* Render if screen width is 480px or more */}
       <MenuHeader />
 
-      <LanguageSwitcher />
+      <LanguageSwitcher dict={dict} lang={lang} />
 
       {/* Render if screen width is 480px or more */}
       <MenuMobileWrapper />

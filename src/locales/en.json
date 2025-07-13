@@ -1,7 +1,10 @@
 {
   "home": "Home",
   "about": "About us",
-  "site-description": "A small multilingual blog built with Next.js (App Router)",
+  "siteDescription": "A small multilingual blog built with Next.js (App Router)",
   "autor": "Valentyn Mostovyi",
-  "autor-by": "Valentyn Mostovyi"
+  "autorBy": "Valentyn Mostovyi",
+  "langSwitcher": "Language switcher",
+  "switchToEn": "Switch to English",
+  "switchToUk": "Switch to Ukrainian"
 }
