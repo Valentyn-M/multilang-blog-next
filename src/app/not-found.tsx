@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
+import NotFoundContent from '@/components/NotFoundContent/NotFoundContent';
 
-export default function Root404() {
-  redirect('/en/not-found');
+export default async function NotFoundPage() {
+  return <NotFoundContent />;
 }

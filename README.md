@@ -35,12 +35,12 @@ A minimalist multilingual blog built with **Next.js App Router**, **TypeScript**
 ```
 src/
 └─ app/
+   ├─ layout.tsx
    ├─ not-found.tsx
    └─ [lang]/
       ├─ layout.tsx
       ├─ loading.tsx
       ├─ error.tsx
-      ├─ not-found.tsx
       ├─ page.tsx
       ├─ [...missing]/
       │  └─ page.tsx
