@@ -7,7 +7,7 @@ export interface LoaderProps {}
 export default function Loader({}: LoaderProps) {
   return (
     <div className={s.loader}>
-      <ChaoticOrbit size="60" speed="1.5" color="#00adb5" />
+      <ChaoticOrbit size="65" speed="1.5" color="#00adb5" />
     </div>
   );
 }

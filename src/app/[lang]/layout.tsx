@@ -1,4 +1,3 @@
-import Loading from '@/app/[lang]/loading';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { SITE_AUTHOR_URL, SITE_TITLE } from '@/constants/site.config';
@@ -8,12 +7,10 @@ import '@/styles/index.scss';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-// 1. SSG for root routes /en, /uk
 export async function generateStaticParams() {
   return i18n.locales.map((lang) => ({ lang }));
 }
 
-// 2. SEO-Metadata, localized
 export async function generateMetadata({
   params,
 }: {
@@ -35,7 +32,6 @@ export async function generateMetadata({
   };
 }
 
-// 3. Root Layout
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '700'],
