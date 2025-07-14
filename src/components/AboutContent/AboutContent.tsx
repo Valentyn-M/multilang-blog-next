@@ -1,5 +1,4 @@
 import MainTitle from '@/components/MainTitle/MainTitle';
-import s from './AboutContent.module.scss';
 import ContentWrapper from '@/components/ContentWrapper/ContentWrapper';
 import ContentBody from '@/components/ContentBody/ContentBody';
 import { Dictionary } from '@/lib/getDictionary';

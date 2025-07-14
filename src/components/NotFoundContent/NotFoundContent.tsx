@@ -3,9 +3,7 @@ import s from './NotFoundContent.module.scss';
 import Link from 'next/link';
 import MainTitle from '@/components/MainTitle/MainTitle';
 
-export interface NotFoundContentProps {}
-
-export default function NotFoundContent({}: NotFoundContentProps) {
+export default function NotFoundContent() {
   return (
     <section className={clsx(s.notFoundContent, 'container')}>
       <MainTitle>Page Not Foung</MainTitle>
