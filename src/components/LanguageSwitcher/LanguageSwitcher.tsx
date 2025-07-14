@@ -15,6 +15,7 @@ export default function LanguageSwitcher({
   dict,
   lang,
 }: LanguageSwitcherProps) {
+  // Get url
   const pathname = usePathname();
 
   // Replace the first segment of the path with nextLang
@@ -24,7 +25,10 @@ export default function LanguageSwitcher({
     return segments.join('/') || '/';
   };
 
+  // Get first other language
   const targetLang = i18n.locales.find((lacale) => lacale !== lang)!;
+
+  // Make label for aria-label
   const labelKey = targetLang === 'en' ? 'switchToEn' : 'switchToUk';
 
   return (

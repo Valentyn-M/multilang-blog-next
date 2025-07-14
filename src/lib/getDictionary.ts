@@ -1,4 +1,4 @@
-import { Locale } from '@/lib/i18n-config';
+import { i18n, Locale } from '@/lib/i18n-config';
 
 export async function getDictionary(locale: Locale) {
   const dictionaries = {
@@ -7,7 +7,7 @@ export async function getDictionary(locale: Locale) {
   } as const;
 
   if (!(locale in dictionaries)) {
-    throw new Error(`Unknown locale "${locale}"`);
+    return dictionaries[i18n.defaultLocale]();
   }
 
   return dictionaries[locale](); //  <-  Promise<Dict>

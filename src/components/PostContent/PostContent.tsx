@@ -2,6 +2,8 @@ import s from './PostContent.module.scss';
 import { Post } from '@/types/post';
 import Image from 'next/image';
 import ContentWrapper from '@/components/ContentWrapper/ContentWrapper';
+import MainTitle from '@/components/MainTitle/MainTitle';
+import ContentBody from '@/components/ContentBody/ContentBody';
 
 export interface PostContentProps {
   readonly postData: Post;
@@ -12,16 +14,16 @@ export default function PostContent({ postData }: PostContentProps) {
 
   return (
     <ContentWrapper>
-      <h1 className={s.title}>{title}</h1>
-      <Image
-        src="/images/post/image.jpg"
-        alt={title}
-        width={1140}
-        height={885}
-        priority
-        className={s.img}
-      />
-      <div className={s.body}>
+      <MainTitle>{title}</MainTitle>
+      <ContentBody>
+        <Image
+          src="/images/post/image.jpg"
+          alt={title}
+          width={1140}
+          height={885}
+          priority
+          className={s.img}
+        />
         <p>{body}.</p>
         <p>{body}.</p>
         <p>{body}.</p>
@@ -29,7 +31,7 @@ export default function PostContent({ postData }: PostContentProps) {
         <p>{body}.</p>
         <p>{body}.</p>
         <p>{body}.</p>
-      </div>
+      </ContentBody>
     </ContentWrapper>
   );
 }

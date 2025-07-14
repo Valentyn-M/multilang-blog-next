@@ -1,0 +1,10 @@
+.title {
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  @include adaptiveValue('font-size', 36, 28);
+}

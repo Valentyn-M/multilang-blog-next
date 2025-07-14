@@ -1,13 +1,15 @@
+import MainTitle from '@/components/MainTitle/MainTitle';
 import s from './AboutContent.module.scss';
 import ContentWrapper from '@/components/ContentWrapper/ContentWrapper';
+import ContentBody from '@/components/ContentBody/ContentBody';
 
 export interface AboutContentProps {}
 
 export default function AboutContent({}: AboutContentProps) {
   return (
     <ContentWrapper>
-      <h1 className={s.title}>About us</h1>
-      <div className={s.body}>
+      <MainTitle>About Us</MainTitle>
+      <ContentBody>
         <p>
           Welcome to Mini-Blog — a small but mighty multilingual blog project.
         </p>
@@ -41,7 +43,7 @@ export default function AboutContent({}: AboutContentProps) {
         </p>
         <p>Проєкт відкритий для навчання, експериментів і вдосконалення.</p>
         <p>Дякуємо за візит!</p> */}
-      </div>
+      </ContentBody>
     </ContentWrapper>
   );
 }
