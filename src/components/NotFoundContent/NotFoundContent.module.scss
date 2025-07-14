@@ -51,6 +51,8 @@
     }
   }
   &:focus {
-    opacity: 0;
+    &::after {
+      opacity: 0;
+    }
   }
 }

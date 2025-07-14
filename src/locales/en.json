@@ -1,10 +1,22 @@
 {
-  "home": "Home",
-  "about": "About us",
-  "siteDescription": "A small multilingual blog built with Next.js (App Router)",
+  "siteDescription": "A compact multilingual blog showcasing modern web development with Next.js App Router.",
   "autor": "Valentyn Mostovyi",
   "autorBy": "Valentyn Mostovyi",
+  "home": "Home",
+  "about": "About Us",
   "langSwitcher": "Language switcher",
   "switchToEn": "Switch to English",
-  "switchToUk": "Switch to Ukrainian"
+  "switchToUk": "Switch to Ukrainian",
+  "menuMobileButtonLabel": "Show or hide menu",
+  "allPostsTitle": "All Posts",
+  "readMore": "Read more",
+  "createdBy": "Created by",
+  "aboutDescription": "Learn more about Mini-Blog — a compact yet powerful multilingual project designed to showcase modern web development.",
+  "aboutPage": {
+    "intro": "Welcome to Mini-Blog — a small but mighty multilingual blog project.",
+    "team": "This project was created by an imaginary team of developers who love clean code, accessibility, and beautiful design.",
+    "mission": "Our mission is to demonstrate how even a small blog can be built with modern tools like Next.js App Router, TypeScript, and SCSS modules — while supporting multiple languages and a great developer experience.",
+    "open": "This project is open for learning, experimenting, and contributing.",
+    "thanks": "Thank you for visiting!"
+  }
 }

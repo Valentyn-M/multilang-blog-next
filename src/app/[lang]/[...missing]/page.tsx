@@ -1,5 +1,5 @@
-import NotFoundContent from '@/components/NotFoundContent/NotFoundContent';
+import { notFound } from 'next/navigation';
 
 export default function NotFoundCatchAll() {
-  return <NotFoundContent />;
+  notFound(); // redirect to app/[lang]/not-found.tsx
 }

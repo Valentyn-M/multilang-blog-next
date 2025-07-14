@@ -23,8 +23,8 @@ export async function generateMetadata({
 
   return {
     title: SITE_TITLE,
-    description: dict['siteDescription'],
-    authors: [{ name: dict['autor'], url: SITE_AUTHOR_URL }],
+    description: dict.siteDescription,
+    authors: [{ name: dict.autor, url: SITE_AUTHOR_URL }],
     icons: {
       icon: [
         { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -57,7 +57,6 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} className={inter.className}>
-      <head></head>
       <body>
         <div className="wrapper">
           <Header dict={dict} lang={lang} />

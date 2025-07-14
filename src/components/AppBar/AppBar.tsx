@@ -8,22 +8,22 @@ import { Dictionary } from '@/lib/getDictionary';
 import { Locale } from '@/lib/i18n-config';
 
 export interface AppBarProps {
-  dict: Dictionary; // або Dictionary['header'] – тільки потрібні ключі
-  lang: Locale;
+  readonly dict: Dictionary;
+  readonly lang: Locale;
 }
 
 export default function AppBar({ dict, lang }: AppBarProps) {
   return (
     <div className={clsx(s.appBar, 'container')}>
-      <Logo />
+      <Logo lang={lang} />
 
       {/* Render if screen width is 480px or more */}
-      <MenuHeader />
+      <MenuHeader dict={dict} lang={lang} />
 
       <LanguageSwitcher dict={dict} lang={lang} />
 
       {/* Render if screen width is 480px or more */}
-      <MenuMobileWrapper />
+      <MenuMobileWrapper dict={dict} lang={lang} />
     </div>
   );
 }

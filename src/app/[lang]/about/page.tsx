@@ -1,13 +1,30 @@
 import AboutContent from '@/components/AboutContent/AboutContent';
 import { SITE_TITLE } from '@/constants/site.config';
+import { getDictionary } from '@/lib/getDictionary';
+import { Locale } from '@/lib/i18n-config';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: `${SITE_TITLE} | About`,
-  description: 'Learn more about our multilingual blog project.',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
-export interface AboutPageProps {}
+  return {
+    title: `${SITE_TITLE} | ${dict.about}`,
+    description: dict.aboutDescription,
+  };
+}
 
-export default function AboutPage({}: AboutPageProps) {
-  return <AboutContent />;
+export interface AboutPageProps {
+  readonly params: Promise<{ lang: Locale }>;
+}
+
+export default async function AboutPage({ params }: AboutPageProps) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
+  return <AboutContent dict={dict} />;
 }
