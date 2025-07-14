@@ -1,3 +1,4 @@
+import Loading from '@/app/[lang]/loading';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { SITE_AUTHOR_URL, SITE_TITLE } from '@/constants/site.config';
