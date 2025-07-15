@@ -4,8 +4,6 @@ A minimalist multilingual blog built with **Next.js App Router**, **TypeScript**
 
 ![Multilang Blog Preview](./preview.jpg)
 
----
-
 ## ✨ Features
 
 - Multilanguage support (e.g., `/en`, `/uk`)
@@ -16,8 +14,6 @@ A minimalist multilingual blog built with **Next.js App Router**, **TypeScript**
 - Responsive layout with mobile support
 - Modular scalable structure
 
----
-
 ## 🛠 Tech Stack
 
 - Next.js 15 (App Router)
@@ -27,8 +23,6 @@ A minimalist multilingual blog built with **Next.js App Router**, **TypeScript**
 - clsx
 - ldrs (spinner library)
 - JSONPlaceholder (mock API)
-
----
 
 ## 📁 Project Structure
 
@@ -64,5 +58,13 @@ public/
 ├─ favicon.svg
 └─ svgSprite.svg
 ```
+
+## 📌 Live Demo
+
+🔗 [https://mini-blog-bay-beta.vercel.app/en](https://mini-blog-bay-beta.vercel.app/en)
+
+## 👨‍💻 Author
+
+Created by [Valentyn Mostovyi](https://github.com/Valentyn-M)
 
 ---
