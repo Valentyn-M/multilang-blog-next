@@ -35,6 +35,7 @@ src/
    └─ [lang]/
       ├─ layout.tsx
       ├─ loading.tsx
+      ├─ not-found.tsx
       ├─ page.tsx
       ├─ [...missing]/
       │  └─ page.tsx
