@@ -1,17 +1,16 @@
 import PostContent from '@/components/PostContent/PostContent';
-import { API_POSTS_ENDPOINT, SITE_TITLE } from '@/constants/site.config';
+import { SITE_TITLE } from '@/constants/site.config';
 import { fetchPost } from '@/lib/fetchPost';
-import { Post } from '@/types/post';
+import { fetchPosts } from '@/lib/fetchPosts';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'auto';
 
 export interface PostPageProps {
   readonly params: Promise<{ id: string }>;
 }
 
 export async function generateStaticParams() {
-  const res = await fetch(`${API_POSTS_ENDPOINT}`);
-  const posts: Post[] = await res.json();
+  const posts = await fetchPosts();
 
   return posts.map((post) => ({
     id: post.id.toString(),
