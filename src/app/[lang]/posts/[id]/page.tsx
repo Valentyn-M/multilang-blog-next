@@ -1,6 +1,5 @@
-import MagicButton from '@/components/magic-button';
 import PostContent from '@/components/PostContent/PostContent';
-import { SITE_TITLE } from '@/constants/site.config';
+import { API_POSTS_ENDPOINT, SITE_TITLE } from '@/constants/site.config';
 import { fetchPost } from '@/lib/fetchPost';
 import { Post } from '@/types/post';
 
@@ -11,7 +10,7 @@ export interface PostPageProps {
 }
 
 export async function generateStaticParams() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const res = await fetch(`${API_POSTS_ENDPOINT}`);
   const posts: Post[] = await res.json();
 
   return posts.map((post) => ({
