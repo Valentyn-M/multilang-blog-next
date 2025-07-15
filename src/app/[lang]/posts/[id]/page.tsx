@@ -1,8 +1,10 @@
+import MagicButton from '@/components/magic-button';
 import PostContent from '@/components/PostContent/PostContent';
 import { SITE_TITLE } from '@/constants/site.config';
 import { fetchPost } from '@/lib/fetchPost';
 import { Post } from '@/types/post';
-import { Metadata } from 'next';
+
+export const dynamic = 'force-dynamic';
 
 export interface PostPageProps {
   readonly params: Promise<{ id: string }>;
@@ -17,20 +19,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: PostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PostPageProps) {
   const { id } = await params;
-
-  try {
-    const post = await fetchPost(id);
-    return {
-      title: `${SITE_TITLE} | ${post.title}`,
-      description: post.body.slice(0, 160),
-    };
-  } catch {
-    return { title: `${SITE_TITLE} | Post not found` };
-  }
+  const post = await fetchPost(id);
+  return {
+    title: `${SITE_TITLE} | ${post.title}`,
+    description: post.body.slice(0, 160),
+  };
 }
 
 export default async function PostPage({ params }: PostPageProps) {

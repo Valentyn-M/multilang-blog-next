@@ -1,9 +1,11 @@
+'use client';
+
 import clsx from 'clsx';
 import s from './ErrorMessage.module.scss';
 
 export interface ErrorMessageProps {
-  message?: string;
-  onRetry?: () => void;
+  readonly message?: string;
+  readonly onRetry?: () => void;
 }
 
 export default function ErrorMessage({

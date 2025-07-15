@@ -1,20 +1,12 @@
 'use client';
 
 import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
-import { useEffect } from 'react';
 
-interface GlobalErrorPageProps {
+interface PostErrorProps {
   readonly error: Error;
   readonly reset: () => void;
 }
 
-export default function GlobalErrorPage({
-  error,
-  reset,
-}: GlobalErrorPageProps) {
-  useEffect(() => {
-    console.error('Global Error:', error);
-  }, [error]);
-
+export default function PostError({ error, reset }: PostErrorProps) {
   return <ErrorMessage message={error.message} onRetry={reset} />;
 }

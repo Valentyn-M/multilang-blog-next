@@ -18,11 +18,11 @@ export async function generateMetadata({
   };
 }
 
-export interface AboutPageProps {
+export interface AboutProps {
   readonly params: Promise<{ lang: Locale }>;
 }
 
-export default async function AboutPage({ params }: AboutPageProps) {
+export default async function About({ params }: AboutProps) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
